@@ -18,7 +18,7 @@ apply_backward_compatibility_fixes() {
     ln -sf /etc/squid3/squid.user.conf /etc/squid3/squid.conf
   fi
 }
-
+service apache2 start
 create_log_dir
 create_cache_dir
 apply_backward_compatibility_fixes
