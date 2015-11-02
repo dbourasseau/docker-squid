@@ -16,6 +16,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 80F70E11F0F0D5F
 #RUN mv cp /etc/apache2/sites-available/000-default.conf cp /etc/apache2/sites-available/000-default.conf.dist \
 RUN a2enmod cgid
 COPY squid.conf /etc/squid3/squid.conf
+COPY cachemgr.conf /etc/squid/cachemgr.conf
 COPY apache.conf /etc/apache2/sites-available/000-default.conf
 COPY entrypoint.sh /sbin/entrypoint.sh
 RUN chmod 755 /sbin/entrypoint.sh
